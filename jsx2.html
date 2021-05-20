@@ -1,5 +1,5 @@
 <head>
-    <title>JSX with variable</title>
+    <title>JSX with a function</title>
 </head>
 <body>
     <div id='root'></div>
@@ -9,11 +9,17 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script  type="text/babel">
 
-//declare a variable called name
-const name = 'Hassan';
-//use name variable inside JSX by wrapping it in curly braces
-const element = <h1>Hello, {name}</h1>;
+//declare a function called mergeName that returns user object
+function mergeName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+//an object is defined for the function parameter
+const userFirstLast = {firstName: 'Nurul', lastName: 'Hasan'};
+//function with defined object inside JSX by wrapping it in curly braces
+const element = (<h1> Hello, {mergeName(userFirstLast)}!  </h1>);
+
 ReactDOM.render(element, document.getElementById('root'));
+
 
   </script>
 </body>
