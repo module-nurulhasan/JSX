@@ -10,10 +10,8 @@
   <script  type="text/babel">
   
 
- function randomGen(){
-  return Math.floor(Math.random() * 1)
- } 
- var x=randomGen();
+ 
+ var x=Math.floor(Math.random()*2)
 
 function mergeName(user) {
   return user.firstName + ' ' + user.lastName;
@@ -25,7 +23,8 @@ const userFirstLast = {firstName: 'Nurul', lastName: 'Hasan'};
 function getGreeting(x) {
   if (x==1) {
     return <h1>Hello, {mergeName(userFirstLast)}!</h1>;  }
-  return <h1>Hello, Stranger,{x}</h1>;}
+  return <h1>Hello, Stranger,{x}</h1>;
+}
 
 
 
