@@ -1,0 +1,30 @@
+<head>
+    <title>JSX within for loop</title>
+</head>
+
+<body>
+    <div id='root'></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+        var x = Math.floor(Math.random() * 10)
+        var A = new Array(x)
+
+        function loop(x) {
+            for (var i = 0; i < x; i++) {
+                A[i] = <h1>{i}</h1>;
+            }
+        }
+        loop(x)
+
+
+        ReactDOM.render(A, document.getElementById('root'));
+
+
+    </script>
+</body>
+
+</html>

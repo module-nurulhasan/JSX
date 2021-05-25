@@ -1,0 +1,34 @@
+<head>
+    <title>JSX within dom attribute</title>
+    
+</head>
+
+<body>
+ 
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+
+
+var element1 =<p tabindex="1">ryrtrtr</p>
+var element2=<p tabindex="2">ffghh</p>
+var element3=<p tabindex="1">bvbvb</p>
+
+/*
+We can only render one element. Even if we have multiple elements to render, 
+there can only be a single root element. This means if we want to render two or more elements, 
+we have to wrap them in another element or component. Commonly, the element used for this is a <div> tag
+*/
+//Both statements are same
+        //ReactDOM.render(<div><p tabindex="1">ryrtrtr</p><p tabindex="2">ffghh</p><p tabindex="1">bvbvb</p></div>,document.body)
+        ReactDOM.render(<div>{element1}{element2}{element3}</div>, document.body);
+       
+      
+
+
+    </script>
+</body>
+
+</html>
